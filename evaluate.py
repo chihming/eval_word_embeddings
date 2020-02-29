@@ -24,7 +24,7 @@ anwsers_all, predictions_all = [], []
 for e, file_name in enumerate(os.listdir(args.datasets), 1):
     del anwsers[:]
     del predictions[:]
-    not_found, total_size = 0., 0.
+    not_found, total_size = 0, 0
     file_path = os.path.join(args.datasets, file_name)
     with open(file_path, 'r') as f:
         for line in f:
@@ -35,8 +35,9 @@ for e, file_name in enumerate(os.listdir(args.datasets), 1):
                 predictions.append(1.-spatial.distance.cosine(embeddings[word1], embeddings[word2]))
                 predictions_all.append(predictions[-1])
             else:
-                not_found += 1.
+                not_found += 1
                 predictions_all.append(0.)
+            total_size += 1
         print("%6s %20s %15s %15s %15.4f %15.4f" % (
             str(e), file_name, str(total_size), str(not_found),
             spearmanr(anwsers_all, predictions_all)[0],
