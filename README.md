@@ -6,6 +6,15 @@ Evaluate the word embeddings similarity with ease
 python3 evaluate.py --embeddings [embedding.file] --datasets [word-sim.folder]
 ```
 
+## about embedding.file
+the embedding.file shall be in a format like:
+```
+wordA 0.041553 -0.023112 0.136088 -0.075858
+wordB 0.029332 -0.041129 -0.050500 0.175179
+wordC 0.059382 -0.060636 -0.000584 0.080352
+...
+```
+
 ## Example
 ```
 git clone https://github.com/chihming/eval_word_embeddings
