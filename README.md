@@ -18,7 +18,7 @@ wordC 0.059382 -0.060636 -0.000584 0.080352
 ## Example
 ```
 git clone https://github.com/chihming/eval_word_embeddings
-eval_word_embeddings
+cd eval_word_embeddings
 wget http://vectors.nlpl.eu/repository/20/6.zip
 unzip 6.zip
 python3 evaluate.py --embeddings model.txt --datasets data/word-sim/
